@@ -20,26 +20,23 @@ number = random.randint(1,20)
 print("Pick a number between 1 and 20: ")
 
 while guessesTaken < 6 :
-    print("Take a guess:")
-    guess = int(input())
-
-    guessesTaken = guessesTaken + 1 
-
-    if guess < number :
-        print("The number you guessed is too low")
-
-    elif guess > number :
-        print("The number you guessed is too high")
-
-    else :
-        print("The two numbers are equal")
-
-    break
+         print("Take a guess:")
+         guess = int(input())
+         guessesTaken = guessesTaken + 1 
+         
+         if guess < number :
+             print("The number you guessed is too low")
+             
+         elif guess > number :
+                 print("The number you guessed is too high")
+                 
+         elif guess == number:
+             break
 
 if guess == number :
     guessesTaken = str(guessesTaken)
     print("Good job! You guessed the number in " + guessesTaken + " guesses!")
-
+        
 elif guess != number:
     number = str(number)
     print("You were incorrect! The number I was thinking was " + number)
